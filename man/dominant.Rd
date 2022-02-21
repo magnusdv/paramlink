@@ -4,7 +4,8 @@
 \name{dominant}
 \alias{dominant}
 \title{Example pedigree for linkage analysis}
-\format{A data frame with 23 rows and 1306 columns, describing the pedigree and 
+\format{
+A data frame with 23 rows and 1306 columns, describing the pedigree and 
 marker data in pre-makeped format. The first 6 columns contain the pedigree 
 structure and affection status, while the final 1300 columns hold the marker alleles.  
 \itemize{
@@ -21,7 +22,8 @@ structure and affection status, while the final 1300 columns hold the marker all
   \item M650_2. Second allele of marker 650
 }
 All markers are SNPs, whose alleles are written as 1 and 2. 
-Missing alleles are denoted by 0.}
+Missing alleles are denoted by 0.
+}
 \usage{
 dominant
 }

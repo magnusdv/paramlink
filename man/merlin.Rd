@@ -5,9 +5,17 @@
 \alias{merlinUnlikely}
 \title{MERLIN wrappers}
 \usage{
-merlin(x, markers = seq_len(x$nMark), model = TRUE, theta = NULL,
-  options = "", verbose = FALSE, generate.files = TRUE,
-  cleanup = generate.files, logfile = "")
+merlin(
+  x,
+  markers = seq_len(x$nMark),
+  model = TRUE,
+  theta = NULL,
+  options = "",
+  verbose = FALSE,
+  generate.files = TRUE,
+  cleanup = generate.files,
+  logfile = ""
+)
 
 merlinUnlikely(x, remove = FALSE, verbose = !remove)
 }
@@ -63,7 +71,7 @@ to be installed and correctly pointed to in the PATH environment variable.
 For these functions to work, MERLIN must be installed and the path to
 merlin.exe included in the PATH variable. The \code{merlin} function is
 first and foremost a wrapper to the parametric linkage functionality of
-MERLIN.
+MERLIN. 
 
 By default the following MERLIN command is run (via a call to
 \code{\link{system}}) after creating appropriate files in the current

@@ -4,9 +4,16 @@
 \alias{as.data.frame.linkdat}
 \title{linkdat to data.frame conversion}
 \usage{
-\method{as.data.frame}{linkdat}(x, ..., famid = F,
-  markers = seq_len(x$nMark), alleles = NULL, missing = NULL,
-  singleCol = FALSE, sep = "")
+\method{as.data.frame}{linkdat}(
+  x,
+  ...,
+  famid = F,
+  markers = seq_len(x$nMark),
+  alleles = NULL,
+  missing = NULL,
+  singleCol = FALSE,
+  sep = ""
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object.}

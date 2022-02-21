@@ -5,8 +5,16 @@
 \alias{summary.powres}
 \title{Power of a linkage study}
 \usage{
-linkage.power(x, N = 100, available = x$available, afreq = c(0.5, 0.5),
-  loop_breakers = NULL, threshold = NULL, seed = NULL, verbose = FALSE)
+linkage.power(
+  x,
+  N = 100,
+  available = x$available,
+  afreq = c(0.5, 0.5),
+  loop_breakers = NULL,
+  threshold = NULL,
+  seed = NULL,
+  verbose = FALSE
+)
 
 \method{summary}{powres}(object, threshold = NULL, ...)
 }

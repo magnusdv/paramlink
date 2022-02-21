@@ -4,9 +4,19 @@
 \alias{relationLR}
 \title{Relationship Likelihood Ratio}
 \usage{
-relationLR(ped_numerator, ped_denominator, ids, alleles, afreq = NULL,
-  known_genotypes = list(), loop_breakers = NULL, Xchrom = FALSE,
-  plot = TRUE, title1 = "", title2 = "")
+relationLR(
+  ped_numerator,
+  ped_denominator,
+  ids,
+  alleles,
+  afreq = NULL,
+  known_genotypes = list(),
+  loop_breakers = NULL,
+  Xchrom = FALSE,
+  plot = TRUE,
+  title1 = "",
+  title2 = ""
+)
 }
 \arguments{
 \item{ped_numerator}{a \code{\link{linkdat}} object, or a list of several

@@ -18,8 +18,16 @@ swapSex(x, ids, verbose = TRUE)
 
 swapAff(x, ids, newval = NULL)
 
-addOffspring(x, father, mother, noffs, ids = NULL, sex = 1, aff = 1,
-  verbose = TRUE)
+addOffspring(
+  x,
+  father,
+  mother,
+  noffs,
+  ids = NULL,
+  sex = 1,
+  aff = 1,
+  verbose = TRUE
+)
 
 addSon(x, parent, id = NULL, aff = 1, verbose = TRUE)
 
@@ -31,8 +39,7 @@ removeIndividuals(x, ids, verbose = TRUE)
 
 branch(x, id)
 
-trim(x, keep = c("available", "affected"), return.ids = FALSE,
-  verbose = TRUE)
+trim(x, keep = c("available", "affected"), return.ids = FALSE, verbose = TRUE)
 
 relabel(x, new, old)
 }

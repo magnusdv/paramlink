@@ -4,8 +4,17 @@
 \alias{simpleSim}
 \title{Unconditional marker simulation}
 \usage{
-simpleSim(x, N, alleles, afreq, available, Xchrom = FALSE, mutmat = NULL,
-  seed = NULL, verbose = T)
+simpleSim(
+  x,
+  N,
+  alleles,
+  afreq,
+  available,
+  Xchrom = FALSE,
+  mutmat = NULL,
+  seed = NULL,
+  verbose = T
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object}

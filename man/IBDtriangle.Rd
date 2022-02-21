@@ -4,10 +4,19 @@
 \alias{IBDtriangle}
 \title{IBD triangle plot}
 \usage{
-IBDtriangle(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "SC",
-  "DFC", "Q"), kinship.lines = numeric(), shading = "lightgray", pch = 16,
-  cex_points = 1.2, cex_text = 1, axes = FALSE, xlim = c(0, 1),
-  ylim = c(0, 1), kappas = TRUE, mar = c(3.1, 3.1, 1, 1))
+IBDtriangle(
+  relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "SC", "DFC", "Q"),
+  kinship.lines = numeric(),
+  shading = "lightgray",
+  pch = 16,
+  cex_points = 1.2,
+  cex_text = 1,
+  axes = FALSE,
+  xlim = c(0, 1),
+  ylim = c(0, 1),
+  kappas = TRUE,
+  mar = c(3.1, 3.1, 1, 1)
+)
 }
 \arguments{
 \item{relationships}{A character vector indicating relationships points to

@@ -4,8 +4,13 @@
 \alias{randomPed}
 \title{Random pedigree}
 \usage{
-randomPed(gen, lambda = 2, penetrances = c(0, 1, 1), naff = "last.gen",
-  founder.mut = 1)
+randomPed(
+  gen,
+  lambda = 2,
+  penetrances = c(0, 1, 1),
+  naff = "last.gen",
+  founder.mut = 1
+)
 }
 \arguments{
 \item{gen}{an integer in the interval \code{[2,5]} indicating the number of

@@ -4,9 +4,17 @@
 \alias{linkageSim}
 \title{Simulate markers linked to a disease locus.}
 \usage{
-linkageSim(x, N = 1, available = x$available, afreq = NULL,
-  partialmarker = NULL, loop_breakers = NULL, unique = FALSE,
-  seed = NULL, verbose = TRUE)
+linkageSim(
+  x,
+  N = 1,
+  available = x$available,
+  afreq = NULL,
+  partialmarker = NULL,
+  loop_breakers = NULL,
+  unique = FALSE,
+  seed = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object}

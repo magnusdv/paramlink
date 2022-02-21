@@ -4,8 +4,14 @@
 \alias{examineKinships}
 \title{Check pedigree for relationship errors}
 \usage{
-examineKinships(x, who = "all", interfam = c("founders", "none", "all"),
-  makeplot = T, pch = 4, ...)
+examineKinships(
+  x,
+  who = "all",
+  interfam = c("founders", "none", "all"),
+  makeplot = T,
+  pch = 4,
+  ...
+)
 }
 \arguments{
 \item{x}{A \code{\link{linkdat}} object, or a list of such.}

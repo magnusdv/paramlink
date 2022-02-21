@@ -5,15 +5,41 @@
 \alias{plot.singleton}
 \title{Plot pedigrees with genotypes}
 \usage{
-\method{plot}{linkdat}(x, marker = NULL, alleles = NULL, sep = "/",
-  missing = "-", skip.empty.genotypes = FALSE, id.labels = NULL,
-  title = NULL, available = FALSE, col = 1, deceased = numeric(0),
-  starred = numeric(0), aff2 = NULL, margins = c(0.6, 1, 4.1, 1), ...)
+\method{plot}{linkdat}(
+  x,
+  marker = NULL,
+  alleles = NULL,
+  sep = "/",
+  missing = "-",
+  skip.empty.genotypes = FALSE,
+  id.labels = NULL,
+  title = NULL,
+  available = FALSE,
+  col = 1,
+  deceased = numeric(0),
+  starred = numeric(0),
+  aff2 = NULL,
+  margins = c(0.6, 1, 4.1, 1),
+  ...
+)
 
-\method{plot}{singleton}(x, marker = NULL, alleles = NULL, sep = "/",
-  missing = "-", skip.empty.genotypes = FALSE, id.labels = NULL,
-  title = NULL, available = FALSE, col = 1, deceased = numeric(0),
-  starred = numeric(0), aff2 = NULL, margins = c(8, 0, 0, 0), ...)
+\method{plot}{singleton}(
+  x,
+  marker = NULL,
+  alleles = NULL,
+  sep = "/",
+  missing = "-",
+  skip.empty.genotypes = FALSE,
+  id.labels = NULL,
+  title = NULL,
+  available = FALSE,
+  col = 1,
+  deceased = numeric(0),
+  starred = numeric(0),
+  aff2 = NULL,
+  margins = c(8, 0, 0, 0),
+  ...
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object.}

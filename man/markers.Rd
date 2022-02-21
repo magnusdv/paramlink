@@ -12,8 +12,18 @@
 \alias{modifyMarkerMatrix}
 \title{Marker functions}
 \usage{
-marker(x, ..., allelematrix, alleles = NULL, afreq = NULL, missing = 0,
-  chrom = NA, pos = NA, name = NA, mutmat = NULL)
+marker(
+  x,
+  ...,
+  allelematrix,
+  alleles = NULL,
+  afreq = NULL,
+  missing = 0,
+  chrom = NA,
+  pos = NA,
+  name = NA,
+  mutmat = NULL
+)
 
 addMarker(x, m, ...)
 
@@ -21,11 +31,16 @@ setMarkers(x, m, annotations = NULL, missing = 0)
 
 modifyMarker(x, marker, ids, genotype, alleles, afreq, chrom, name, pos)
 
-getMarkers(x, markernames = NULL, chroms = NULL, fromPos = NULL,
-  toPos = NULL)
+getMarkers(x, markernames = NULL, chroms = NULL, fromPos = NULL, toPos = NULL)
 
-removeMarkers(x, markers = NULL, markernames = NULL, chroms = NULL,
-  fromPos = NULL, toPos = NULL)
+removeMarkers(
+  x,
+  markers = NULL,
+  markernames = NULL,
+  chroms = NULL,
+  fromPos = NULL,
+  toPos = NULL
+)
 
 swapGenotypes(x, ids)
 

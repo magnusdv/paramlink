@@ -4,8 +4,15 @@
 \alias{lod}
 \title{Two-point LOD score}
 \usage{
-lod(x, markers = seq_len(x$nMark), theta = 0, loop_breakers = NULL,
-  max.only = FALSE, verbose = FALSE, tol = 0.01)
+lod(
+  x,
+  markers = seq_len(x$nMark),
+  theta = 0,
+  loop_breakers = NULL,
+  max.only = FALSE,
+  verbose = FALSE,
+  tol = 0.01
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object.}

@@ -4,7 +4,9 @@
 \name{toyped}
 \alias{toyped}
 \title{Toy pedigree for linkage analysis}
-\format{A data frame with 4 rows and 8 columns}
+\format{
+A data frame with 4 rows and 8 columns
+}
 \usage{
 toyped
 }

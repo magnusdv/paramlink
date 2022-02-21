@@ -4,8 +4,17 @@
 \alias{exclusionPower}
 \title{Power of exclusion}
 \usage{
-exclusionPower(ped_claim, ped_true, ids, markerindex = NULL, alleles = NULL,
-  afreq = NULL, known_genotypes = list(), Xchrom = FALSE, plot = TRUE)
+exclusionPower(
+  ped_claim,
+  ped_true,
+  ids,
+  markerindex = NULL,
+  alleles = NULL,
+  afreq = NULL,
+  known_genotypes = list(),
+  Xchrom = FALSE,
+  plot = TRUE
+)
 }
 \arguments{
 \item{ped_claim}{a \code{\link{linkdat}} object, or a list of several

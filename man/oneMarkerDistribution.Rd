@@ -4,9 +4,17 @@
 \alias{oneMarkerDistribution}
 \title{Genotype probability distribution}
 \usage{
-oneMarkerDistribution(x, ids, partialmarker, theta = NULL,
-  grid.subset = NULL, loop_breakers = NULL, eliminate = 0,
-  ignore.affection.status = FALSE, verbose = TRUE)
+oneMarkerDistribution(
+  x,
+  ids,
+  partialmarker,
+  theta = NULL,
+  grid.subset = NULL,
+  loop_breakers = NULL,
+  eliminate = 0,
+  ignore.affection.status = FALSE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{A \code{\link{linkdat}} object.}

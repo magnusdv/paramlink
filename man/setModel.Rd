@@ -5,8 +5,7 @@
 \alias{print.linkdat.model}
 \title{Set, change or display the model parameters for 'linkdat' objects}
 \usage{
-setModel(x, model = NULL, chrom = NULL, penetrances = NULL,
-  dfreq = NULL)
+setModel(x, model = NULL, chrom = NULL, penetrances = NULL, dfreq = NULL)
 
 \method{print}{linkdat.model}(x, ...)
 }

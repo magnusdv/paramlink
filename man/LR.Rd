@@ -7,8 +7,8 @@
 LR(x, ref, markers)
 }
 \arguments{
-\item{x}{A list of pedigrees. Each pedigree is either a single linkdat/singleton object, or a list of such objects 
-(the latter is neccessary if the pedigree is disconnected).}
+\item{x}{A list of pedigrees. Each pedigree is either a single linkdat/singleton object, or a list of such objects
+(the latter is necessary if the pedigree is disconnected).}
 
 \item{ref}{A single integer, indicating the index of the reference pedigree. This is used in the denominator of each LR.}
 

@@ -9,9 +9,19 @@
 \alias{subset.linkdat}
 \title{Linkdat objects}
 \usage{
-linkdat(ped, model = NULL, map = NULL, dat = NULL, freq = NULL,
-  annotations = NULL, missing = 0, header = FALSE, checkped = TRUE,
-  verbose = TRUE, ...)
+linkdat(
+  ped,
+  model = NULL,
+  map = NULL,
+  dat = NULL,
+  freq = NULL,
+  annotations = NULL,
+  missing = 0,
+  header = FALSE,
+  checkped = TRUE,
+  verbose = TRUE,
+  ...
+)
 
 singleton(id, sex = 1, famid = 1, verbose = FALSE, ...)
 
@@ -19,11 +29,14 @@ singleton(id, sex = 1, famid = 1, verbose = FALSE, ...)
 
 \method{summary}{linkdat}(object, ...)
 
-write.linkdat(x, prefix = "", what = c("ped", "map", "dat", "freq",
-  "model"), merlin = FALSE)
+write.linkdat(
+  x,
+  prefix = "",
+  what = c("ped", "map", "dat", "freq", "model"),
+  merlin = FALSE
+)
 
-\method{subset}{linkdat}(x, subset = x$orig.ids, ...,
-  markers = seq_len(x$nMark))
+\method{subset}{linkdat}(x, subset = x$orig.ids, ..., markers = seq_len(x$nMark))
 }
 \arguments{
 \item{ped}{a matrix, data.frame or a character with the path to a pedigree

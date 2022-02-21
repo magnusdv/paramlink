@@ -4,9 +4,18 @@
 \alias{markerSim}
 \title{Marker simulation}
 \usage{
-markerSim(x, N = 1, available = NULL, alleles = NULL, afreq = NULL,
-  partialmarker = NULL, loop_breakers = NULL, eliminate = 0,
-  seed = NULL, verbose = TRUE)
+markerSim(
+  x,
+  N = 1,
+  available = NULL,
+  alleles = NULL,
+  afreq = NULL,
+  partialmarker = NULL,
+  loop_breakers = NULL,
+  eliminate = 0,
+  seed = NULL,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object}

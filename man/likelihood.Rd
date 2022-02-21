@@ -10,17 +10,33 @@
 \usage{
 likelihood(x, ...)
 
-\method{likelihood}{linkdat}(x, locus1, locus2 = NULL, theta = NULL,
-  startdata = NULL, eliminate = 0, logbase = NULL, loop_breakers = NULL,
-  ...)
+\method{likelihood}{linkdat}(
+  x,
+  locus1,
+  locus2 = NULL,
+  theta = NULL,
+  startdata = NULL,
+  eliminate = 0,
+  logbase = NULL,
+  loop_breakers = NULL,
+  ...
+)
 
 \method{likelihood}{singleton}(x, locus1, logbase = NULL, ...)
 
 \method{likelihood}{list}(x, locus1, locus2 = NULL, ..., returnprod = TRUE)
 
-likelihood_LINKAGE(x, marker, theta = NULL, afreq = NULL, logbase = NULL,
-  TR.MATR = NULL, initialCalc = NULL, singleNum.geno = NULL,
-  loop_breakers = NULL)
+likelihood_LINKAGE(
+  x,
+  marker,
+  theta = NULL,
+  afreq = NULL,
+  logbase = NULL,
+  TR.MATR = NULL,
+  initialCalc = NULL,
+  singleNum.geno = NULL,
+  loop_breakers = NULL
+)
 }
 \arguments{
 \item{x}{a \code{\link{linkdat}} object, a \code{\link{singleton}} object,
