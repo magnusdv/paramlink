@@ -59,6 +59,7 @@ examineKinships = function(x, who = "all", interfam = c("founders", "none", "all
         use_groups = sapply(who, match.arg, groups[-6])
 
     if (makeplot) {
+
         if (is.linkdat(x)) {
             g = .generations(x)
             marg = max(1, 12 - 2 * g)
@@ -67,6 +68,10 @@ examineKinships = function(x, who = "all", interfam = c("founders", "none", "all
         }
         else if (is.linkdat.list(x))
             cat("Warning: Automatic plotting is not implemented when 'x' is a list of linkdat objects. Use plotPedList().\n")
+
+        op = par(xpd = NA)
+        op$mfrow = c(1,1)
+        on.exit(par(op))
 
         IBDtriangle(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "SC"))
         legend("topright", title=" According to pedigree:", title.adj=0, pch=pch, lwd=2, lty=NA,
