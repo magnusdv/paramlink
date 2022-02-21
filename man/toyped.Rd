@@ -22,7 +22,7 @@ The format is standard LINKAGE (pre-makeped) format, with columns as follows:
   \item FID. Father ID
   \item MID. Mother ID
   \item SEX. Gender (male=1, female=2)
-  \item AFF. Affection status (unaffected=1, affected=2, unkonwn=0)
+  \item AFF. Affection status (unaffected=1, affected=2, unknown=0)
   \item M_A1. First allele of marker 1
   \item M_A2. Second allele of marker 1
 }

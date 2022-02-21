@@ -57,8 +57,8 @@ list of \code{linkdat} objects.}
 ID label or the internal labeling.}
 
 \item{relation}{one of the words (possibly truncated) \code{parents},
-\code{siblings}, \code{grandparents}, \code{nephews_nieces}, \code{cousins},
-\code{spouses}, \code{unrelated}.}
+\code{siblings}, \code{grandparents}, \code{nephews_nieces},
+\code{cousins}, \code{spouses}, \code{unrelated}.}
 
 \item{available}{a logical, if TRUE only pairs of available individuals are
 returned.}
@@ -76,28 +76,28 @@ included; if \code{all}, all interfamiliar (available) pairs are included.}
 
 \item{half}{a logical or NA. If TRUE (resp FALSE), only half (resp. full)
 siblings/cousins/nephews/nieces are returned. If NA, both categories are
-inclucded.}
+included.}
 
 \item{removal}{a non-negative integer}
 }
 \value{
 For \code{ancestors(x,id)}, a vector containing the ID's of all
-ancestors of the individual \code{id}.  For \code{descendants(x,id)}, a
-vector containing the ID's of all descendants (i.e. children, grandchildren,
-a.s.o.) of individual \code{id}.
+  ancestors of the individual \code{id}.  For \code{descendants(x,id)}, a
+  vector containing the ID's of all descendants (i.e. children,
+  grandchildren, a.s.o.) of individual \code{id}.
 
-The functions \code{cousins}, \code{grandparents}, \code{nephews_nieces},
-\code{offspring}, \code{parents}, \code{siblings}, \code{spouses},
-\code{unrelated}, each returns an integer vector containing the ID's of all
-pedigree members having the specified relationship with \code{id}.
+  The functions \code{cousins}, \code{grandparents}, \code{nephews_nieces},
+  \code{offspring}, \code{parents}, \code{siblings}, \code{spouses},
+  \code{unrelated}, each returns an integer vector containing the ID's of all
+  pedigree members having the specified relationship with \code{id}.
 
-For \code{related.pairs} a matrix with two columns. Each row gives of a pair
-of pedigree members with the specified relation. If the input is a list of
-multiple pedigrees, the matrix entries are characters of the form 'X-Y'
-where X is the family ID and Y the individual ID of the person.
+  For \code{related.pairs} a matrix with two columns. Each row gives of a
+  pair of pedigree members with the specified relation. If the input is a
+  list of multiple pedigrees, the matrix entries are characters of the form
+  'X-Y' where X is the family ID and Y the individual ID of the person.
 
-For \code{leaves}, a vector of IDs containing all pedigree members without
-children.
+  For \code{leaves}, a vector of IDs containing all pedigree members without
+  children.
 }
 \description{
 Utility functions for 'linkdat' objects, mainly for extracting various
@@ -133,7 +133,4 @@ LOD2 = lod(loopfree, theta=0.1)
 stopifnot(all.equal(loopx, tieLoops(loopfree)))
 stopifnot(all.equal(LOD1, LOD2))
 
-}
-\author{
-Magnus Dehli Vigeland
 }

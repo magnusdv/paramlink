@@ -54,8 +54,8 @@ affection statuses are swapped 1 <-> 2, hence the main use of the
 \code{newval} argument is to assign 0's.}
 
 \item{father, mother}{Integers indicating the IDs of parents. If missing, a
-new founder individual is created (whose ID will be 1+the largest ID already
-in the pedigree).}
+new founder individual is created (whose ID will be 1+the largest ID
+already in the pedigree).}
 
 \item{noffs}{A single integer indicating the number of offspring to be
 created.}
@@ -125,7 +125,4 @@ stopifnot(setequal(unavail, c(5, 19:23)), setequal(nonaff, c(6:7, 12:13, 19:23))
 }
 \seealso{
 \code{\link{linkdat}}, \code{\link{nuclearPed}}
-}
-\author{
-Magnus Dehli Vigeland
 }

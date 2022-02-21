@@ -21,7 +21,8 @@ showInTriangle(
 )
 }
 \arguments{
-\item{k0, k2}{Numerical vectors giving coordinates for points to be plotted in the IBDtriangle.}
+\item{k0, k2}{Numerical vectors giving coordinates for points to be plotted in
+the IBDtriangle.}
 
 \item{new}{Logical indicating if a new IBDtriangle should be drawn.}
 
@@ -29,7 +30,8 @@ showInTriangle(
 
 \item{labels}{A character of same length as \code{k0}, or NULL.}
 
-\item{col_labels, cex_labels, pos, adj}{Parameters passed onto \code{\link{text}} (if \code{labels} is non-NULL).}
+\item{col_labels, cex_labels, pos, adj}{Parameters passed onto
+\code{\link{text}} (if \code{labels} is non-NULL).}
 
 \item{\dots}{Plot arguments passed on to \code{IBDtriangle}.}
 }
@@ -43,7 +45,4 @@ showInTriangle(k0=3/8, k2=1/8, label="3/4 siblings", pos=1)
 }
 \seealso{
 \code{\link{IBDtriangle}}, \code{\link{examineKinships}}
-}
-\author{
-Magnus Dehli Vigeland
 }

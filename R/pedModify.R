@@ -11,34 +11,33 @@
 #'
 #' @param x A \code{\link{linkdat}} object
 #' @param id,ids Individual ID label(s). In \code{addOffspring} the (optional)
-#' \code{ids} argument is used to specify ID labels for the offspring to be
-#' created.
+#'   \code{ids} argument is used to specify ID labels for the offspring to be
+#'   created.
 #' @param newval A numeric, indicating affection status values for the
-#' \code{ids} individuals: 1=unaffected, 2=affected, 0=unknown. If NULL, the
-#' affection statuses are swapped 1 <-> 2, hence the main use of the
-#' \code{newval} argument is to assign 0's.
+#'   \code{ids} individuals: 1=unaffected, 2=affected, 0=unknown. If NULL, the
+#'   affection statuses are swapped 1 <-> 2, hence the main use of the
+#'   \code{newval} argument is to assign 0's.
 #' @param father,mother Integers indicating the IDs of parents. If missing, a
-#' new founder individual is created (whose ID will be 1+the largest ID already
-#' in the pedigree).
+#'   new founder individual is created (whose ID will be 1+the largest ID
+#'   already in the pedigree).
 #' @param noffs A single integer indicating the number of offspring to be
-#' created.
+#'   created.
 #' @param sex,aff Integer vectors indicating the gender and affection statuses
-#' of the offspring to be created (recycled if less than \code{noffs}
-#' elements).
+#'   of the offspring to be created (recycled if less than \code{noffs}
+#'   elements).
 #' @param verbose A logical: Verbose output or not.
 #' @param parent Integer ID of any pedigree member, which will be the father or
-#' mother (depending on its gender) of the new child.
+#'   mother (depending on its gender) of the new child.
 #' @param keep A character, either 'available' (trimming the pedigree for
-#' unavailable members) or 'affected' (trimming for unaffected members).
+#'   unavailable members) or 'affected' (trimming for unaffected members).
 #' @param return.ids A logical. If FALSE, the trimmed pedigree is returned as a
-#' new \code{linkdat} object. If TRUE, a vector containing the IDs of
-#' 'removable' individuals is returned
+#'   new \code{linkdat} object. If TRUE, a vector containing the IDs of
+#'   'removable' individuals is returned
 #' @param new a numeric containing new labels to replace those in \code{old}.
 #' @param old a numeric containing ID labels to be replaced by those in
-#' \code{new}. If missing, \code{old} is set to \code{x$orig.ids}, i.e. all
-#' members in their original order.
+#'   \code{new}. If missing, \code{old} is set to \code{x$orig.ids}, i.e. all
+#'   members in their original order.
 #' @return The modified \code{linkdat} object.
-#' @author Magnus Dehli Vigeland
 #' @seealso \code{\link{linkdat}}, \code{\link{nuclearPed}}
 #'
 #' @examples
@@ -369,9 +368,8 @@ relabel = function(x, new, old) {
 #' @param available a numeric containing the IDs of available individuals.
 #' @param ids the individual(s) whose availability status should be swapped.
 #' @return The modified \code{linkdat} object.
-#' @author Magnus Dehli Vigeland
 #' @seealso \code{\link{plot.linkdat}}, \code{\link{linkage.power}},
-#' \code{\link{linkageSim}}
+#'   \code{\link{linkageSim}}
 #'
 #' @examples
 #'

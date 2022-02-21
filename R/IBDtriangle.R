@@ -1,16 +1,15 @@
 #' IBD triangle plot
 #'
-#' The IBD triangle is typically used to visualize the pairwise
-#' relatedness of non-inbred individuals.  Various annotations are available,
-#' including points marking the most common relationships, contour lines for
-#' the kinship coefficients, and shading of the unattainable region.
+#' The IBD triangle is typically used to visualize the pairwise relatedness of
+#' non-inbred individuals.  Various annotations are available, including points
+#' marking the most common relationships, contour lines for the kinship
+#' coefficients, and shading of the unattainable region.
 #'
 #' For any pair of non-inbred individuals A and B, their genetic relationship
 #' can be summarized by the IBD coefficients \eqn{(\kappa_0, \kappa_1,
-#' \kappa_2)}, where
-#' \deqn{\kappa_i = P(A and B share i alleles IBD at random autosomal locus).}
-#' Since \eqn{\kappa_0+\kappa_1+\kappa_2=1}, any
-#' relationship corresponds to a point in the triangle in the \eqn{(\kappa_0,
+#' \kappa_2)}, where \deqn{\kappa_i = P(A and B share i alleles IBD at random
+#' autosomal locus).} Since \eqn{\kappa_0+\kappa_1+\kappa_2=1}, any relationship
+#' corresponds to a point in the triangle in the \eqn{(\kappa_0,
 #' \kappa_2)}-plane defined by \eqn{\kappa_0 \ge 0, \kappa_2 \ge 0, \kappa_0 +
 #' \kappa_2 \le 1}. The choice of \eqn{\kappa_0} and \eqn{\kappa_2} as the axis
 #' variables is done for reasons of symmetry and is not significant (other
@@ -18,34 +17,34 @@
 #'
 #' As shown in (Thompson, 1976) points in the subset of the triangle defined by
 #' \eqn{4\kappa_0\kappa_2 > \kappa_1^2} is unattainable for pairwise
-#' relationships.  By default this region in shaded in a 'lightgray' color.
+#' relationships.  By default this region in shaded in a 'lightgray' colour.
 #'
 #' The IBD coefficients are linearly related to the kinship coefficient
 #' \eqn{\phi} by the formula \deqn{\phi = 0.25\kappa_1 + 0.5\kappa_2.} By
 #' indicating values for \eqn{\phi} in the \code{kinship.lines} argument, the
 #' corresponding contour lines are shown as dashed lines in the triangle plot.
 #'
-#' @param relationships A character vector indicating relationships points to
-#' be included in the plot. By default all of the following are included:
-#' UN=unrelated; PO=parent/offspring; MZ=monozygotic
-#' twins; S=full siblings; H=half siblings; U=uncle/niece and similar; G=grandparent/grandchild;
-#' FC=first cousins; SC=second cousins; DFC=double first cousins; Q=quadruple first half cousins.
+#' @param relationships A character vector indicating relationships points to be
+#'   included in the plot. By default all of the following are included:
+#'   UN=unrelated; PO=parent/offspring; MZ=monozygotic twins; S=full siblings;
+#'   H=half siblings; U=uncle/niece and similar; G=grandparent/grandchild;
+#'   FC=first cousins; SC=second cousins; DFC=double first cousins; Q=quadruple
+#'   first half cousins.
 #' @param kinship.lines A numeric vector. (See Details.)
-#' @param shading The shading color for the unattainable region.
+#' @param shading The shading colour for the unattainable region.
 #' @param pch Symbol used for the relationship points (see \code{\link{par}}).
 #' @param cex_points A single numeric controlling the symbol size for the
-#' relationship points.
+#'   relationship points.
 #' @param cex_text A single numeric controlling the font size for the
-#' relationship labels.
+#'   relationship labels.
 #' @param axes Draw surrounding axis box?
 #' @return NULL
-#' @author Magnus Dehli Vigeland
 #' @seealso \code{\link{examineKinships}}
-#' @references E. A. Thompson (1975). \emph{The estimation of pairwise relationships.}
-#' Annals of Human Genetics 39.
+#' @references E. A. Thompson (1975). \emph{The estimation of pairwise
+#'   relationships.} Annals of Human Genetics 39.
 #'
-#' E. A. Thompson (1976). \emph{A restriction on the space of genetic relationships.}
-#' Annals of Human Genetics 40.
+#'   E. A. Thompson (1976). \emph{A restriction on the space of genetic
+#'   relationships.} Annals of Human Genetics 40.
 #'
 #' @examples
 #'
@@ -102,14 +101,15 @@ IBDtriangle = function(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "
 #'
 #' Utility function for plotting points in the IBD triangle.
 #'
-#' @param k0,k2 Numerical vectors giving coordinates for points to be plotted in the IBDtriangle.
+#' @param k0,k2 Numerical vectors giving coordinates for points to be plotted in
+#'   the IBDtriangle.
 #' @param new Logical indicating if a new IBDtriangle should be drawn.
 #' @param col,cex,pch,lwd Parameters passed onto \code{\link{points}}.
 #' @param labels A character of same length as \code{k0}, or NULL.
-#' @param col_labels,cex_labels,pos,adj Parameters passed onto \code{\link{text}} (if \code{labels} is non-NULL).
+#' @param col_labels,cex_labels,pos,adj Parameters passed onto
+#'   \code{\link{text}} (if \code{labels} is non-NULL).
 #' @param \dots Plot arguments passed on to \code{IBDtriangle}.
 #' @return NULL
-#' @author Magnus Dehli Vigeland
 #' @seealso \code{\link{IBDtriangle}}, \code{\link{examineKinships}}
 #'
 #' @examples

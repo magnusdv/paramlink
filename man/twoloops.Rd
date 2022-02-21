@@ -5,7 +5,7 @@
 \alias{twoloops}
 \title{A consanguineous pedigree}
 \format{
-A data frame with 17 rows and 6 columns. 
+A data frame with 17 rows and 6 columns.
 See \code{\link{toyped}} for details about the format.
 }
 \usage{

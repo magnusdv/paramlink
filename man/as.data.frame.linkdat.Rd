@@ -20,17 +20,16 @@
 
 \item{\dots}{further arguments (not used).}
 
-\item{famid}{a logical indicating if the family identifier should be
-included as the first column.}
+\item{famid}{a logical indicating if the family identifier should be included
+as the first column.}
 
-\item{markers}{a numeric indicating which markers should be
-included/printed.}
+\item{markers}{a numeric indicating which markers should be included/printed.}
 
 \item{alleles}{a character containing allele names, e.g.
 \code{alleles=c('A','B')}.}
 
-\item{missing}{the character (of length 1) used for missing alleles.
-Defaults to '0'.}
+\item{missing}{the character (of length 1) used for missing alleles. Defaults
+to '0'.}
 
 \item{singleCol}{a logical: Should the two alleles for each marker be pasted
 into one column or kept in separate columns?}
@@ -46,8 +45,8 @@ Convert a linkdat object to data.frame for pretty printing.
 }
 \details{
 This function is mainly intended for pretty-printing \code{linkdat} objects
-(for instance it is called by \code{print.linkdat}). For direct
-manipulation of the pedigree and/or marker matrices, it is better to use
+(for instance it is called by \code{print.linkdat}). For direct manipulation
+of the pedigree and/or marker matrices, it is better to use
 \code{\link{as.matrix.linkdat}}.
 }
 \examples{
@@ -61,7 +60,4 @@ as.data.frame(x, sep = '/', missing = '-', singleCol = TRUE)
 }
 \seealso{
 \code{\link{as.matrix.linkdat}}
-}
-\author{
-Magnus Dehli Vigeland
 }

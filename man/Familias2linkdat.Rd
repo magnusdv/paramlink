@@ -13,8 +13,8 @@ readFamiliasLoci(loci)
 connectedComponents(ID, FID, MID)
 }
 \arguments{
-\item{familiasped}{A \code{\link[Familias]{FamiliasPedigree}} object or a list of
-such.}
+\item{familiasped}{A \code{\link[Familias]{FamiliasPedigree}} object or a
+list of such.}
 
 \item{datamatrix}{A data frame with two columns per marker (one for each
 allele) and one row per individual.}
@@ -56,7 +56,7 @@ library(Familias)
 data(NorwegianFrequencies)
 locus1 = FamiliasLocus(NorwegianFrequencies$TH01)
 persons = c('mother', 'daughter', 'AF')
-ped1 = FamiliasPedigree(id=persons, dadid=c(NA, 'AF', NA), momid=c(NA, 'mother', NA), 
+ped1 = FamiliasPedigree(id=persons, dadid=c(NA, 'AF', NA), momid=c(NA, 'mother', NA),
                          sex=c('female', 'female', 'male'))
 datamatrix = data.frame(THO1.1=c(NA, 8, NA), THO1.2=c(NA,9.3, NA))
 rownames(datamatrix) = persons
@@ -83,7 +83,8 @@ plotPedList(x, new=TRUE, id.labels='num', frametitles=c('H1', 'H2'),
 
 }
 \references{
-Windows Familias is freely availabe from \url{http://familias.name}.
+Windows Familias is freely available from
+  \url{https://familias.name}.
 }
 \seealso{
 See \code{Familias} and \code{\link{linkdat}}.

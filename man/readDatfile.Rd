@@ -11,14 +11,15 @@ readDatfile(datfile, chrom, comment_string = "<<", write_to = NULL)
 
 \item{chrom}{integer chromosome number (needed to create the MERLIN map).}
 
-\item{comment_string}{character indicating comments (which are removed before processing).}
+\item{comment_string}{character indicating comments (which are removed before
+processing).}
 
 \item{write_to}{a character prefix used for naming the output files, or NULL
 if no files should be written.}
 }
 \value{
 If \code{write_to} is NULL, a list of data.frames named \code{dat},
-\code{map} and \code{freq}.
+  \code{map} and \code{freq}.
 }
 \description{
 Converts dat files in LINKAGE format to dat/map/freq files in MERLIN format
@@ -27,7 +28,4 @@ Converts dat files in LINKAGE format to dat/map/freq files in MERLIN format
 
 # No example given.
 
-}
-\author{
-Magnus Dehli Vigeland
 }

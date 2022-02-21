@@ -64,6 +64,3 @@ stopifnot(all(r1==c(.5,0,0,.5)), all(r2==c(.25,.25,.25,.25)))
 \seealso{
 \code{\link{oneMarkerDistribution}}
 }
-\author{
-Magnus Dehli Vigeland
-}

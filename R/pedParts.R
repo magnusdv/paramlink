@@ -4,46 +4,45 @@
 #' pedigree information.
 #'
 #' @param x a \code{\link{linkdat}} object. In \code{related.pairs} possibly a
-#' list of \code{linkdat} objects.
+#'   list of \code{linkdat} objects.
 #' @param id a numerical ID label.
 #' @param original.id a logical indicating whether 'id' refers to the original
-#' ID label or the internal labeling.
+#'   ID label or the internal labeling.
 #' @param degree a non-negative integer.
 #' @param removal a non-negative integer
 #' @param half a logical or NA. If TRUE (resp FALSE), only half (resp. full)
-#' siblings/cousins/nephews/nieces are returned. If NA, both categories are
-#' inclucded.
+#'   siblings/cousins/nephews/nieces are returned. If NA, both categories are
+#'   included.
 #' @param relation one of the words (possibly truncated) \code{parents},
-#' \code{siblings}, \code{grandparents}, \code{nephews_nieces}, \code{cousins},
-#' \code{spouses}, \code{unrelated}.
+#'   \code{siblings}, \code{grandparents}, \code{nephews_nieces},
+#'   \code{cousins}, \code{spouses}, \code{unrelated}.
 #' @param interfam one of the words (possibly truncated) \code{none},
-#' \code{founders} or \code{all}, specifying which interfamiliar pairs should
-#' be included as unrelated in the case where \code{x} is a list of several
-#' pedigrees. If \code{none}, only intrafamiliar pairs are considered; if
-#' \code{founders} all interfamiliar pairs of (available) founders are
-#' included; if \code{all}, all interfamiliar (available) pairs are included.
+#'   \code{founders} or \code{all}, specifying which interfamiliar pairs should
+#'   be included as unrelated in the case where \code{x} is a list of several
+#'   pedigrees. If \code{none}, only intrafamiliar pairs are considered; if
+#'   \code{founders} all interfamiliar pairs of (available) founders are
+#'   included; if \code{all}, all interfamiliar (available) pairs are included.
 #' @param available a logical, if TRUE only pairs of available individuals are
-#' returned.
+#'   returned.
 #' @param ... further parameters
 #'
 #' @return For \code{ancestors(x,id)}, a vector containing the ID's of all
-#' ancestors of the individual \code{id}.  For \code{descendants(x,id)}, a
-#' vector containing the ID's of all descendants (i.e. children, grandchildren,
-#' a.s.o.) of individual \code{id}.
+#'   ancestors of the individual \code{id}.  For \code{descendants(x,id)}, a
+#'   vector containing the ID's of all descendants (i.e. children,
+#'   grandchildren, a.s.o.) of individual \code{id}.
 #'
-#' The functions \code{cousins}, \code{grandparents}, \code{nephews_nieces},
-#' \code{offspring}, \code{parents}, \code{siblings}, \code{spouses},
-#' \code{unrelated}, each returns an integer vector containing the ID's of all
-#' pedigree members having the specified relationship with \code{id}.
+#'   The functions \code{cousins}, \code{grandparents}, \code{nephews_nieces},
+#'   \code{offspring}, \code{parents}, \code{siblings}, \code{spouses},
+#'   \code{unrelated}, each returns an integer vector containing the ID's of all
+#'   pedigree members having the specified relationship with \code{id}.
 #'
-#' For \code{related.pairs} a matrix with two columns. Each row gives of a pair
-#' of pedigree members with the specified relation. If the input is a list of
-#' multiple pedigrees, the matrix entries are characters of the form 'X-Y'
-#' where X is the family ID and Y the individual ID of the person.
+#'   For \code{related.pairs} a matrix with two columns. Each row gives of a
+#'   pair of pedigree members with the specified relation. If the input is a
+#'   list of multiple pedigrees, the matrix entries are characters of the form
+#'   'X-Y' where X is the family ID and Y the individual ID of the person.
 #'
-#' For \code{leaves}, a vector of IDs containing all pedigree members without
-#' children.
-#' @author Magnus Dehli Vigeland
+#'   For \code{leaves}, a vector of IDs containing all pedigree members without
+#'   children.
 #'
 #' @examples
 #'
