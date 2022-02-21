@@ -53,18 +53,16 @@
 #' IBDtriangle(kinship=c(0.25, 0.125), shading=NULL, cex_text=0.8)
 #' 
 #' @export
-IBDtriangle = function(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "SC", "DFC", 
-    "Q"), kinship.lines = numeric(), shading = "lightgray", pch = 16, cex_points = 1.2, cex_text = 1, 
-    axes = FALSE, xlim=c(0,1), ylim=c(0,1), kappas=TRUE, mar = c(3.1, 3.1, 1, 1)) {
-    
-    xpd = all(c(xlim, ylim) == c(0,1,0,1))
-    par(xpd = xpd, mar = mar, pty = "s")
-    
-    plot(NULL, xlim = xlim, ylim = ylim, axes = axes, ann = FALSE)
-    if(kappas) {
-        mtext(text = c(expression(italic(kappa[0])), expression(italic(kappa[2]))), side = 1:2, 
-        line = c(1, 0.5), las = 1)
-    }
+IBDtriangle = function(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "SC", "DFC",
+    "Q"), kinship.lines = numeric(), shading = "lightgray", pch = 16, cex_points = 1.2, cex_text = 1,
+    axes = FALSE) {
+
+    par(xpd = T, mar = c(3.1, 3.1, 1, 1), pty = "s")
+
+    plot(NULL, xlim = c(0, 1), ylim = c(0, 1), axes = axes, ann = FALSE)
+    mtext(mtext(text = c(expression(italic(kappa[0])), expression(italic(kappa[2]))), side = 1:2,
+                line = c(1, 0.5), las = 1))
+
     # impossible region shading(do borders afterwards)
     kk0 = seq(0, 1, length = 501)
     kk2 = 1 + kk0 - 2 * sqrt(kk0)

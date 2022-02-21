@@ -11,18 +11,14 @@ IBDtriangle(
   pch = 16,
   cex_points = 1.2,
   cex_text = 1,
-  axes = FALSE,
-  xlim = c(0, 1),
-  ylim = c(0, 1),
-  kappas = TRUE,
-  mar = c(3.1, 3.1, 1, 1)
+  axes = FALSE
 )
 }
 \arguments{
 \item{relationships}{A character vector indicating relationships points to
 be included in the plot. By default all of the following are included:
 UN=unrelated; PO=parent/offspring; MZ=monozygotic
-twins; S=full siblings; H=half siblings; U=uncle/niece and similar; G=grandparent/grandchild; 
+twins; S=full siblings; H=half siblings; U=uncle/niece and similar; G=grandparent/grandchild;
 FC=first cousins; SC=second cousins; DFC=double first cousins; Q=quadruple first half cousins.}
 
 \item{kinship.lines}{A numeric vector. (See Details.)}
@@ -48,7 +44,7 @@ the kinship coefficients, and shading of the unattainable region.
 \details{
 For any pair of non-inbred individuals A and B, their genetic relationship
 can be summarized by the IBD coefficients \eqn{(\kappa_0, \kappa_1,
-\kappa_2)}, where 
+\kappa_2)}, where
 \deqn{\kappa_i = P(A and B share i alleles IBD at random autosomal locus).}
 Since \eqn{\kappa_0+\kappa_1+\kappa_2=1}, any
 relationship corresponds to a point in the triangle in the \eqn{(\kappa_0,
