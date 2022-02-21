@@ -308,16 +308,7 @@ relabel = function(x, new, old) {
     } else return(ped)
 }
 
-#' Check pedigree order
-#' 
-#' Checks a pedigree or linkdat object if parents come before their children
-#' @param x a \code{\link{linkdat}} object
-#' 
-#' @examples
-#' x1 = nuclearPed(1)
-#' x2 = linkdat(x1$pedigree[3:1, ])
-#' stopifnot(.parents_before_children(x1), !.parents_before_children(x2))
-#'
+
 .check_parents_before_children = function(x) {
     if (is.linkdat(x)) {
         ped = x$pedigree # uses internal ordering, but thats OK just for checking
