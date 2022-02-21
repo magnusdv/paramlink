@@ -240,7 +240,7 @@ ancestors = function(x, id) {
         p = x$pedigree
         orig_ids = x$orig.ids
         ids_int = .internalID(x, id)
-    } else if (is.matrix(x) && c("ID", "FID", "MID") %in% colnames(x)) {
+    } else if (is.matrix(x) && isTRUE(all(c("ID", "FID", "MID") %in% colnames(x)))) {
         p = x
         orig_ids = p[, "ID"]
         ids_int = match(id, orig_ids)
