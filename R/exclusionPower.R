@@ -153,6 +153,8 @@ exclusionPower = function(ped_claim, ped_true, ids, markerindex = NULL, alleles 
 
     if (isTRUE(plot) || plot == "plot_only") {
         op = par(oma = c(0, 0, 3, 0), xpd = NA)
+        on.exit(par(op))
+
         widths = ifelse(sapply(c(ped_claim, ped_true), is.singleton), 1, 2)
         claim_ratio = sum(widths[1:N_claim])/sum(widths)
         layout(rbind(1:N), widths = widths)
@@ -178,7 +180,7 @@ exclusionPower = function(ped_claim, ped_true, ids, markerindex = NULL, alleles 
             0.02, from = "ndc"), grconvertY(0.98, from = "ndc"))
         rect(grconvertX(claim_ratio + 0.02, from = "ndc"), grconvertY(0.02, from = "ndc"),
             grconvertX(0.98, from = "ndc"), grconvertY(0.98, from = "ndc"))
-        par(op)
+
         if (plot == "plot_only")
             return()
     }

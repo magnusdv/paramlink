@@ -27,8 +27,9 @@
 #' z = mergePed(x,y)
 #'
 #' # plot all three pedigrees
-#' par(mfrow=c(1,3))
+#' op = par(mfrow = c(1,3))
 #' plot(x); plot(y); plot(z)
+#' par(op)
 #'
 #' @export
 mergePed = function(x, y, quick = FALSE) {

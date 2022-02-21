@@ -100,6 +100,7 @@ plot.linkdat = function(x, marker = NULL, alleles = NULL, sep = "/", missing = "
             strid = geno else strid = paste(strid, geno, sep = "\n")
     }
     oldmar = par(mar = margins)  # without this, par() does not equal 'margins'...(why??) Needed for centered title.
+    on.exit(par(oldmar))
 
     # Colours
     cols = rep(col, length = x$nInd)

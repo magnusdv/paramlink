@@ -37,7 +37,8 @@ y = addOffspring(y, father=9, mother=10, noffs=1, id=11)
 z = mergePed(x,y)
 
 # plot all three pedigrees
-par(mfrow=c(1,3))
+op = par(mfrow = c(1,3))
 plot(x); plot(y); plot(z)
+par(op)
 
 }

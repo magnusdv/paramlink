@@ -7,10 +7,10 @@
 plotPedList(
   plot.arg.list,
   widths = NA,
-  frames = T,
+  frames = TRUE,
   frametitles = NULL,
   fmar = NA,
-  newdev = F,
+  newdev = FALSE,
   dev.height = NA,
   dev.width = NA,
   ...
@@ -65,7 +65,7 @@ Note that for tweaking dev.height and dev.width the function
 # Simplest use: Just give a list of linkdat objects.
 # To guess suitable plot window dimensions, use 'newdev=T'
 peds = list(nuclearPed(3),cousinPed(2), singleton(12), halfCousinsPed(0))
-plotPedList(peds, newdev=TRUE)
+plotPedList(peds) # try with newdev=TRUE
 
 \dontrun{
 # Modify the relative widths (which are not guessed)

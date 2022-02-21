@@ -39,7 +39,7 @@
 #' # Simplest use: Just give a list of linkdat objects.
 #' # To guess suitable plot window dimensions, use 'newdev=T'
 #' peds = list(nuclearPed(3),cousinPed(2), singleton(12), halfCousinsPed(0))
-#' plotPedList(peds, newdev=TRUE)
+#' plotPedList(peds) # try with newdev=TRUE
 #'
 #' \dontrun{
 #' # Modify the relative widths (which are not guessed)
@@ -99,8 +99,8 @@
 #' }
 #'
 #' @export
-plotPedList = function(plot.arg.list, widths = NA, frames = T, frametitles = NULL, fmar = NA,
-    newdev = F, dev.height = NA, dev.width = NA, ...) {
+plotPedList = function(plot.arg.list, widths = NA, frames = TRUE, frametitles = NULL, fmar = NA,
+    newdev = FALSE, dev.height = NA, dev.width = NA, ...) {
 
     plot.list.flattened = list()
     if (deduceFrames <- isTRUE(frames)) {
@@ -182,9 +182,14 @@ plotPedList = function(plot.arg.list, widths = NA, frames = T, frametitles = NUL
         dev.new(height = dev.height, width = dev.width, noRStudioGD = TRUE)
     }
     if (hastitles)
-        par(oma = c(0, 0, 3, 0), xpd = NA) else par(oma = c(0, 0, 0, 0), xpd = NA)
+      opar = par(oma = c(0, 0, 3, 0), xpd = NA)
+    else
+      opar = par(oma = c(0, 0, 0, 0), xpd = NA)
+    on.exit(par(opar))
+
     layout(rbind(1:N), widths = widths)
-    for (arglist in plot.arg.list) do.call(plot, arglist)
+    for (arglist in plot.arg.list)
+      do.call(plot, arglist)
 
     # leftmost coordinate of each plot region (converted to value in [0,1]).
     ratios = c(0, cumsum(widths)/sum(widths))

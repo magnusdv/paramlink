@@ -56,7 +56,8 @@ IBDtriangle = function(relationships = c("UN", "PO", "MZ", "S", "H,U,G", "FC", "
     "Q"), kinship.lines = numeric(), shading = "lightgray", pch = 16, cex_points = 1.2, cex_text = 1,
     axes = FALSE) {
 
-    par(xpd = T, mar = c(3.1, 3.1, 1, 1), pty = "s")
+    opar = par(xpd = T, mar = c(3.1, 3.1, 1, 1), pty = "s")
+    on.exit(par(opar))
 
     plot(NULL, xlim = c(0, 1), ylim = c(0, 1), axes = axes, ann = FALSE)
     mtext(mtext(text = c(expression(italic(kappa[0])), expression(italic(kappa[2]))), side = 1:2,
