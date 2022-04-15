@@ -4,15 +4,12 @@
 \alias{relatednessCoeff}
 \alias{inbreeding}
 \alias{kinship_coefs}
-\alias{jacquard}
 \alias{jacquard2}
 \title{Relatedness coefficients}
 \usage{
 inbreeding(x)
 
 kinship_coefs(x, ids = NULL)
-
-jacquard(x, ids)
 
 jacquard2(x, ids, verbose = FALSE, cleanup = TRUE)
 }
@@ -43,12 +40,8 @@ wrappers for functions in other packages or external programs.
 }
 \details{
 Both \code{inbreeding} and \code{kinship_coefs} are thin wrappers of
-\code{\link[kinship2]{kinship}}.  Similarly, \code{jacquard} wraps
-\code{identity::identity.coefs}, which is an R interface for the C program
-\code{IdCoefs} written by Mark Abney. The function
-\code{identity::identity.coefs} sometimes causes R to crash, hence I have
-provided an alternative wrapper, \code{jacquard2}, which executes an external
-call to the original C program \code{IdCoefs} (version 2.1.1). For this to
+\code{\link[kinship2]{kinship}}. \code{jacquard2}, executes an external
+call to the C program \code{IdCoefs} (Abney, 2009). For this to
 function, \code{IdCoefs} must be installed on the computer (see link in the
 References section below) and the executable placed in a folder included in
 the PATH variable. The \code{jacquard2} wrapper works by writing the
@@ -80,6 +73,5 @@ The \code{IdCoefs} program: Abney, Mark (2009). A graphical
   \url{http://home.uchicago.edu/~abney/abney_web/Software.html}
 }
 \seealso{
-\code{\link[kinship2]{kinship}},
-  \code{\link[identity]{identity.coefs}}
+\code{\link[kinship2]{kinship}}
 }
