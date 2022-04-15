@@ -4,12 +4,15 @@
 \alias{relatednessCoeff}
 \alias{inbreeding}
 \alias{kinship_coefs}
+\alias{jacquard}
 \alias{jacquard2}
 \title{Relatedness coefficients}
 \usage{
 inbreeding(x)
 
 kinship_coefs(x, ids = NULL)
+
+jacquard(x, ids)
 
 jacquard2(x, ids, verbose = FALSE, cleanup = TRUE)
 }

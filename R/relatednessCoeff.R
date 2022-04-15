@@ -78,16 +78,17 @@ kinship_coefs = function(x, ids = NULL) {
     kin.matrix[as.character(ids[1]), as.character(ids[2])]
 }
 
-# #' @rdname relatednessCoeff
-# #' @export
-# jacquard = function(x, ids) {
-#     if (!requireNamespace("identity", quietly = TRUE))
-#         stop("Package 'identity' must be install for this function to work.", call. = FALSE)
-#     assert_that(length(ids) == 2, all(ids %in% x$orig.ids))
-#     idsi = .internalID(x, ids)
-#     ped = x$pedigree[, 1:3]
-#     identity::identity.coefs(idsi, ped)[2, 3:11]
-# }
+#' @rdname relatednessCoeff
+#' @export
+jacquard = function(x, ids) {
+    message("This function is no longer available. Use `ribd::identityCoefs()` instead")
+    #if (!requireNamespace("identity", quietly = TRUE))
+    #    stop("Package 'identity' must be install for this function to work.", call. = FALSE)
+    #assert_that(length(ids) == 2, all(ids %in% x$orig.ids))
+    #idsi = .internalID(x, ids)
+    #ped = x$pedigree[, 1:3]
+    #identity::identity.coefs(idsi, ped)[2, 3:11]
+}
 
 
 #' @rdname relatednessCoeff
